@@ -16,7 +16,7 @@ use crate::request::{OpenDbRequest, VoidOpenDbRequest};
 mod idb_version_change_event;
 
 /// Wrapper for an [`IndexedDB`](web_sys::IdbDatabase)
-#[derive(Debug, new)]
+#[derive(Debug, new, Clone)]
 #[new(vis(pub(crate)))]
 pub struct IdbDatabase {
     inner: web_sys::IdbDatabase,
